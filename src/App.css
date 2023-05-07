@@ -2,6 +2,11 @@
   text-align: center;
 }
 
+html,
+body {
+  overflow: hidden;
+}
+
 
 .App-header {
   background-color: #282c34;
@@ -29,7 +34,7 @@
 .Welcome {
   text-align: center;
   color: #ffd87d;
-  font-size: 280%;
+  font-size: 3rem;
   font-weight: 400;
 }
 
@@ -39,8 +44,9 @@
 }
 
 .pfp-pic {
+  outline: 2px solid #ccc;
+  outline-offset: 4px;
   height: 35vmin;
-  padding-top: 20px;
 }
 
 .social-icons {
@@ -52,25 +58,11 @@
   margin-bottom: -10px;
 }
 
-.Youtube-icon {
-  display: inline-block;
-  vertical-align: middle;
-  margin-right: 20px;
-  width: 85px;
-  height: 59px;
-}
 
-.Twitter-icon {
+.icon {
   display: inline-block;
   vertical-align: middle;
-  margin-right: 20px;
+  margin: 10px;
   width: 64px;
   height: 64px;
-}
-
-.Github-icon {
-  display: inline-block;
-  vertical-align: middle;
-  width: 68px;
-  height: 68px;
 }

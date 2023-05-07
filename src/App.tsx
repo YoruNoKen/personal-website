@@ -21,16 +21,15 @@ function App() {
           className="pfp-pic"
           alt="logo"
         />
-        <p className="socials-title">Socials:</p>
         <div className="social-icons">
           <a
             className="Youtube-link"
-            href="https://www.youtube.com"
+            href="https://www.youtube.com/@yorunoken"
             rel="noopener noreferrer">
             <img
               src={youtube_icon}
               alt="Youtube"
-              className="Youtube-icon"></img>
+              className="icon"></img>
           </a>
           <a
             className="Twitter-link"
@@ -39,7 +38,7 @@ function App() {
             <img
               src={twitter_icon}
               alt="Twitter"
-              className="Twitter-icon"></img>
+              className="icon"></img>
           </a>
           <a
             className="Github-link"
@@ -48,8 +47,9 @@ function App() {
             <img
               src={github_logo}
               alt="GitHub"
-              className="Github-icon"></img>
+              className="icon"></img>
           </a>
+          <p>uoh uoh uohhh I love cunny</p>
         </div>
       </header>
     </div>
