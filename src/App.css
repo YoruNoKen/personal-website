@@ -2,17 +2,13 @@
   text-align: center;
 }
 
-html,
-body {
-  overflow: hidden;
-}
-
-
 .App-header {
   background-image: url("./img/btr.png");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
-  background-color: #00575b;
-  min-height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -20,6 +16,13 @@ body {
   color: white;
   padding-top: 80px;
 }
+
+@media only screen and (max-device-width: 1366px) {
+  .App-header {
+    background-attachment: scroll;
+  }
+}
+
 
 .Bio-header {
   background-color: #282c34;
@@ -32,7 +35,7 @@ body {
   padding-top: 80px;
 }
 
-.container {
+.bio-container {
   border: 0px solid #FFC784;
   border-spacing: 200px;
   border-width: 5px;
@@ -43,7 +46,6 @@ body {
   padding-right: 50px;
   background-color: rgba(40, 44, 52, 0.85)
 }
-
 
 .Welcome {
   text-align: center;
@@ -76,9 +78,8 @@ body {
   margin-top: 25px;
 }
 
-
 .icon {
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.7s ease-in-out;
   animation-name: icon-unhover;
   animation-duration: 200ms;
   animation-fill-mode: backwards;
@@ -89,12 +90,15 @@ body {
   height: 72px;
 }
 
+.icon:not(:hover) {
+  opacity: 0.8;
+}
+
 .icon:hover {
   animation-name: icon-hover;
   animation-duration: 200ms;
   animation-fill-mode: forwards;
 }
-
 
 @keyframes icon-hover {
   100% {
@@ -113,4 +117,56 @@ body {
     margin: 15px;
     transform: scale(1);
   }
+}
+
+.video-container {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border: 0px solid #FFC784;
+  border-spacing: 200px;
+  border-width: 5px;
+  border-radius: 50px;
+  padding-top: 20px;
+  padding-bottom: 60px;
+  padding-left: 60px;
+  padding-right: 60px;
+  background-color: rgba(40, 44, 52, 0.85)
+}
+
+.video-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.github-container {
+  margin-top: 50px;
+  margin-bottom: 10px;
+  border: 0px solid #FFC784;
+  border-spacing: 200px;
+  border-width: 5px;
+  border-radius: 50px;
+  padding-top: 20px;
+  padding-bottom: 60px;
+  padding-left: 60px;
+  padding-right: 60px;
+  background-color: rgba(40, 44, 52, 0.85)
+}
+
+.github-title {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.mia-osu {
+  text-decoration: overline 2px;
+}
+
+.mia-osu-text {
+  font-size: 1.1rem;
+  font-weight: 450;
+}
+
+
+.image-button {
+  color: #282c34;
 }
