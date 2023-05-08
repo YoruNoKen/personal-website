@@ -19,6 +19,7 @@ function App() {
             My name is Yoru.
             <br /> I'm a beginner-level programmer and I like playing video games!
           </p>
+          <p className="bio">A photo of my wife:</p>
           <img
             src={pfp}
             className="pfp-pic"
