@@ -1,4 +1,3 @@
-import { useState } from "react";
 import pfp from "./img/pfp.png";
 import youtube_icon from "./img/Youtube.png";
 import twitter_icon from "./img/Twitter.png";
