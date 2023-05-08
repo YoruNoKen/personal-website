@@ -1,3 +1,4 @@
+import { useState } from "react";
 import pfp from "./img/pfp.png";
 import youtube_icon from "./img/Youtube.png";
 import twitter_icon from "./img/Twitter.png";
@@ -6,6 +7,11 @@ import screenshot1 from "./img/screenshot1.png";
 import "./App.css";
 
 function App() {
+  const [clicked, setClicked] = useState(false);
+  const handleClick = () => {
+    setClicked(!clicked);
+  };
+
   return (
     <div className="App">
       <header className="App-header">
@@ -62,11 +68,11 @@ function App() {
         <div className="video-container">
           <p className="video-title">Here's a recent video of mine:</p>
           <iframe
+            title="cool titlee"
             width="560"
             height="315"
             src="https://www.youtube.com/embed/mVtehI3Xf6o"
-            title="YouTube video player"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+            className="ifram"></iframe>
         </div>
         <div className="github-container">
           <p className="github-title">Some of the projects I've worked on:</p>
@@ -76,7 +82,8 @@ function App() {
           <img
             src={screenshot1}
             alt="Screenshot"
-            className="image-container"
+            className={`image ${clicked ? "clicked" : ""}`}
+            onClick={handleClick}
           />
         </div>
         <p>pwease send me luv</p>

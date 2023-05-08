@@ -36,6 +36,7 @@
 }
 
 .bio-container {
+  margin: 50px;
   border: 0px solid #FFC784;
   margin-top: -30px;
   border-spacing: 200px;
@@ -103,34 +104,37 @@
 
 @keyframes icon-hover {
   100% {
-    margin: 20px;
-    transform: scale(1.3);
+    width: 85px;
+    height: 85px;
   }
 }
 
 @keyframes icon-unhover {
   0% {
-    margin: 20px;
-    transform: scale(1.3);
+    width: 85px;
+    height: 85px;
   }
 
   100% {
-    margin: 15px;
-    transform: scale(1);
+    width: 72px;
+    height: 72px;
   }
 }
 
 .video-container {
+  margin: 50px;
+  border: 5px solid #FFC784;
   margin-top: 50px;
-  border: 0px solid #FFC784;
-  border-spacing: 200px;
-  border-width: 5px;
   border-radius: 50px;
-  padding-top: 20px;
-  padding-bottom: 60px;
-  padding-left: 60px;
-  padding-right: 60px;
-  background-color: rgba(40, 44, 52, 0.85)
+  padding: 20px 60px 60px 60px;
+  background-color: rgba(40, 44, 52, 0.85);
+  box-sizing: border-box;
+  position: relative;
+}
+
+.ifram {
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .video-title {
@@ -139,16 +143,14 @@
 }
 
 .github-container {
+  margin: 50px;
   margin-top: 50px;
   margin-bottom: 10px;
   border: 0px solid #FFC784;
   border-spacing: 200px;
   border-width: 5px;
   border-radius: 50px;
-  padding-top: 20px;
-  padding-bottom: 60px;
-  padding-left: 60px;
-  padding-right: 60px;
+  padding: 20px 60px 60px 60px;
   background-color: rgba(40, 44, 52, 0.85)
 }
 
@@ -166,7 +168,12 @@
   font-weight: 450;
 }
 
+.image {
+  width: 400px;
+  height: auto;
+  transition: all 0.3s ease;
+}
 
-.image-button {
-  color: #282c34;
+.image.clicked {
+  width: 600px;
 }
