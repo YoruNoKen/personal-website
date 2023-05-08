@@ -37,7 +37,7 @@
 
 .bio-container {
   border: 0px solid #FFC784;
-  margin-bottom: 50px;
+
   border-spacing: 200px;
   border-width: 5px;
   border-radius: 50px;
@@ -122,7 +122,6 @@
 
 .video-container {
   margin-top: 50px;
-  margin-bottom: 50px;
   border: 0px solid #FFC784;
   border-spacing: 200px;
   border-width: 5px;
