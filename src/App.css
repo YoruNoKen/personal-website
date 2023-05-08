@@ -50,6 +50,8 @@ body {
   color: #ffd87d;
   font-size: 3rem;
   font-weight: 400;
+  margin: 0;
+  padding: 0;
 }
 
 .bio {
@@ -69,14 +71,46 @@ body {
 }
 
 .social-icons {
+  display: flex;
+  justify-content: center;
   margin-top: 25px;
 }
 
 
 .icon {
+  transition: transform 0.3s ease-in-out;
+  animation-name: icon-unhover;
+  animation-duration: 200ms;
+  animation-fill-mode: backwards;
   display: inline-block;
   vertical-align: middle;
-  margin: 10px;
-  width: 64px;
-  height: 64px;
+  margin: 15px;
+  width: 72px;
+  height: 72px;
+}
+
+.icon:hover {
+  animation-name: icon-hover;
+  animation-duration: 200ms;
+  animation-fill-mode: forwards;
+}
+
+
+@keyframes icon-hover {
+  100% {
+    margin: 20px;
+    transform: scale(1.3);
+  }
+}
+
+@keyframes icon-unhover {
+  0% {
+    margin: 20px;
+    transform: scale(1.3);
+  }
+
+  100% {
+    margin: 15px;
+    transform: scale(1);
+  }
 }

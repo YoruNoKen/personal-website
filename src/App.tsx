@@ -12,7 +12,6 @@ function App() {
         <div className="container">
           <h6
             className="Welcome"
-            style={{ margin: 0, padding: 0 }}
             rel="noopener noreferrer">
             Welcome!
           </h6>
@@ -29,7 +28,8 @@ function App() {
             <a
               className="Youtube-link"
               href="https://www.youtube.com/@yorunoken"
-              rel="noopener noreferrer">
+              rel="noopener noreferrer"
+              target="_blank">
               <img
                 src={youtube_icon}
                 alt="Youtube"
@@ -38,7 +38,8 @@ function App() {
             <a
               className="Twitter-link"
               href="https://twitter.com/ken_yoru"
-              rel="noopener noreferrer">
+              rel="noopener noreferrer"
+              target="_blank">
               <img
                 src={twitter_icon}
                 alt="Twitter"
@@ -47,7 +48,8 @@ function App() {
             <a
               className="Github-link"
               href="https://github.com/YoruNoKen"
-              rel="noopener noreferrer">
+              rel="noopener noreferrer"
+              target="_blank">
               <img
                 src={github_logo}
                 alt="GitHub"
