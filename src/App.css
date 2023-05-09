@@ -1,15 +1,19 @@
-.App {
-  text-align: center;
+.background {
+  background-image: url(https://yorunoken.s-ul.eu/88Mh3UnN);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .App-header {
+  text-align: center;
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   color: white;
-  padding-top: 80px;
+  padding-top: 5%;
 }
 
 .Bio-header {
@@ -107,6 +111,36 @@
   }
 }
 
+.button-top,
+.button-bottom {
+  position: static;
+  font-size: 110%;
+  size: 20%;
+  padding: 2% 4%;
+  margin: 1%;
+  background-color: #698ac9;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: all 0.2s ease-in-out;
+}
+
+.button-bottom:hover,
+.button-top:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.button-top {
+  margin-bottom: 1%;
+}
+
+.button-bottom {
+  margin-top: 1%;
+}
+
 .video-container {
   border: 5px solid #FFC784;
   margin-top: 2%;
@@ -117,62 +151,6 @@
   background-color: rgba(40, 44, 52, 0.85);
   box-sizing: border-box;
   position: relative;
-}
-
-.button-top,
-.button-bottom {
-  position: relative;
-  font-size: 110%;
-  padding: 2% 4%;
-  background-color: #698ac9;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  opacity: 0.7;
-}
-
-.button-bottom:hover,
-.button-top:hover {
-  animation-name: button-hover;
-  animation-duration: 200ms;
-  animation-fill-mode: forwards;
-  opacity: 1;
-}
-
-.button-bottom:not(:hover),
-.button-top:not(:hover) {
-  animation-name: button-unhover;
-  animation-duration: 200ms;
-  animation-fill-mode: forwards;
-  opacity: 1;
-}
-
-@keyframes button-unhover {
-  0% {
-    font-size: 120%;
-    padding: 2.5% 4.75%;
-  }
-
-  100% {
-    font-size: 100%;
-    padding: 2% 4%;
-  }
-}
-
-@keyframes button-hover {
-  100% {
-    font-size: 120%;
-    padding: 2.5% 4.75%;
-  }
-}
-
-.button-top {
-  margin-bottom: 1%;
-}
-
-.button-bottom {
-  margin-top: 1%;
 }
 
 .iframe {
@@ -187,17 +165,18 @@
 }
 
 .github-container {
+  overflow: auto;
   margin: 10%;
   margin-top: 2%;
   margin-left: 2%;
   margin-right: 2%;
   margin-bottom: 0.5%;
   border: 0px solid #FFC784;
-  border-spacing: 200px;
   border-width: 5px;
   border-radius: 50px;
   padding: 0% 3% 3% 3%;
-  background-color: rgba(40, 44, 52, 0.85)
+  background-color: rgba(40, 44, 52, 0.85);
+  max-width: 88%;
 }
 
 .github-title {
@@ -215,11 +194,7 @@
 }
 
 .image {
-  width: 70%;
+  width: 90%;
   height: auto;
   transition: all 0.3s ease;
-}
-
-.image.clicked {
-  width: 100%;
 }

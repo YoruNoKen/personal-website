@@ -19,7 +19,12 @@ export function VideoPlayer() {
       <button
         onClick={prevVideo}
         className="button-top">
-        Previous Video
+        Prev
+      </button>
+      <button
+        onClick={nextvideo}
+        className="button-bottom">
+        Next
       </button>
       <iframe
         title="cool titlee"
@@ -27,11 +32,6 @@ export function VideoPlayer() {
         height="315"
         src={videos[videoIndex]}
         className="iframe"></iframe>
-      <button
-        onClick={nextvideo}
-        className="button-bottom">
-        Next Video
-      </button>
     </div>
   );
 }

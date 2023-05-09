@@ -3,21 +3,17 @@ import pfp from "./img/pfp.png";
 import youtube_icon from "./img/Youtube.png";
 import twitter_icon from "./img/Twitter.png";
 import github_logo from "./img/GitHub.png";
-import screenshot1 from "./img/screenshot1.png";
-import { VideoPlayer } from "./func/videoPlayer";
 import "./App.css";
 
-function App() {
-  const [clicked, setClicked] = useState(false);
-  const handleClick = () => {
-    setClicked(!clicked);
-  };
+import { VideoPlayer } from "./func/videoPlayer";
+import { Github } from "./func/githubShowcase";
 
+function App() {
   const [backgroundY, setbackgroundY] = useState(0);
   useEffect(() => {
     const handScroll = () => {
       const scrollPercent = (window.scrollY / window.innerHeight) * 80;
-      const newY = scrollPercent * 0.1;
+      const newY = scrollPercent * 0.2;
       setbackgroundY(newY);
     };
     window.addEventListener("scroll", handScroll);
@@ -27,19 +23,11 @@ function App() {
     };
   }, []);
 
-  const headerStyle = {
-    backgroundImage: `url(https://yorunoken.s-ul.eu/88Mh3UnN)`,
-    backgroundAttachment: "fixed",
-    backgroundPosition: `center ${backgroundY + 25}%`,
-    backgroundSize: "cover",
-    backgroundRepeat: "no-repeat",
-  };
-
   return (
-    <div className="App">
-      <header
-        className="App-header"
-        style={headerStyle}>
+    <div
+      className="background"
+      style={{ backgroundPosition: `center ${backgroundY + 25}%` }}>
+      <header className="App-header">
         <div className="bio-container">
           <h6
             className="Welcome"
@@ -91,18 +79,7 @@ function App() {
           </div>
         </div>
         <VideoPlayer />
-        <div className="github-container">
-          <p className="github-title">Some of the projects I've worked on:</p>
-          <br></br>
-          <h2 className="mia-osu">Mia-osu</h2>
-          <p className="mia-osu-text">A Discord bot written in JavaScript for osu!game</p>
-          <img
-            src={screenshot1}
-            alt="Screenshot"
-            className={`image ${clicked ? "clicked" : ""}`}
-            onClick={handleClick}
-          />
-        </div>
+        <Github />
         <p>pwease send me luv</p>
       </header>
     </div>
