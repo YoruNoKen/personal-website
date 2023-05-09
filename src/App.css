@@ -14,7 +14,9 @@
 
 @media only screen and (max-device-width: 1366px) {
   .App-header {
-    background-attachment: scroll;
+    background-attachment: fixed;
+    background-size: 200%;
+    background-position: center center;
   }
 }
 
@@ -164,11 +166,11 @@
 }
 
 .image {
-  width: 400px;
+  width: 70%;
   height: auto;
   transition: all 0.3s ease;
 }
 
 .image.clicked {
-  width: 600px;
+  width: 100%;
 }

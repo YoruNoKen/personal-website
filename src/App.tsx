@@ -31,8 +31,8 @@ function App() {
     backgroundAttachment: "fixed",
     backgroundPosition: `center ${backgroundY + 25}%`,
     backgroundSize: "cover",
+    backgroundRepeat: "no-repeat",
   };
-  console.log(headerStyle);
 
   return (
     <div className="App">
