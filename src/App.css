@@ -12,15 +12,6 @@
   padding-top: 80px;
 }
 
-@media only screen and (max-device-width: 1366px) {
-  .App-header {
-    background-attachment: fixed;
-    background-size: 200%;
-    background-position: center center;
-  }
-}
-
-
 .Bio-header {
   background-color: #282c34;
   min-height: 100vh;
