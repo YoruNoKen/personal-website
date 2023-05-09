@@ -33,23 +33,21 @@
 }
 
 .bio-container {
-  margin: 50px;
   border: 0px solid #FFC784;
-  margin-top: -30px;
+  margin-top: -3%;
+  margin-left: 2%;
+  margin-right: 2%;
   border-spacing: 200px;
   border-width: 5px;
   border-radius: 50px;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  padding-left: 50px;
-  padding-right: 50px;
+  padding: 0% 3% 3% 3%;
   background-color: rgba(40, 44, 52, 0.85)
 }
 
 .Welcome {
   text-align: center;
   color: #ffd87d;
-  font-size: 3rem;
+  font-size: 300%;
   font-weight: 400;
   margin: 0;
   padding: 0;
@@ -119,11 +117,12 @@
 }
 
 .video-container {
-  margin: 50px;
   border: 5px solid #FFC784;
-  margin-top: 50px;
+  margin-top: 2%;
+  margin-left: 2%;
+  margin-right: 2%;
   border-radius: 50px;
-  padding: 20px 60px 60px 60px;
+  padding: 0% 3% 3% 3%;
   background-color: rgba(40, 44, 52, 0.85);
   box-sizing: border-box;
   position: relative;
@@ -140,14 +139,16 @@
 }
 
 .github-container {
-  margin: 50px;
-  margin-top: 50px;
-  margin-bottom: 10px;
+  margin: 10%;
+  margin-top: 2%;
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-bottom: 0.5%;
   border: 0px solid #FFC784;
   border-spacing: 200px;
   border-width: 5px;
   border-radius: 50px;
-  padding: 20px 60px 60px 60px;
+  padding: 0% 3% 3% 3%;
   background-color: rgba(40, 44, 52, 0.85)
 }
 
