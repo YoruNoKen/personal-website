@@ -4,6 +4,7 @@ import youtube_icon from "./img/Youtube.png";
 import twitter_icon from "./img/Twitter.png";
 import github_logo from "./img/GitHub.png";
 import screenshot1 from "./img/screenshot1.png";
+import { VideoPlayer } from "./func/videoPlayer";
 import "./App.css";
 
 function App() {
@@ -89,15 +90,7 @@ function App() {
             </a>
           </div>
         </div>
-        <div className="video-container">
-          <p className="video-title">Here's a recent video of mine:</p>
-          <iframe
-            title="cool titlee"
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/mVtehI3Xf6o"
-            className="ifram"></iframe>
-        </div>
+        <VideoPlayer />
         <div className="github-container">
           <p className="github-title">Some of the projects I've worked on:</p>
           <br></br>
