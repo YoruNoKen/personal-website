@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import pfp from "./img/pfp.png";
 import youtube_icon from "./img/Youtube.png";
 import twitter_icon from "./img/Twitter.png";
@@ -12,9 +12,33 @@ function App() {
     setClicked(!clicked);
   };
 
+  const [backgroundY, setbackgroundY] = useState(0);
+  useEffect(() => {
+    const handScroll = () => {
+      const scrollPercent = (window.scrollY / window.innerHeight) * 80;
+      const newY = scrollPercent * 0.1;
+      setbackgroundY(newY);
+    };
+    window.addEventListener("scroll", handScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handScroll);
+    };
+  }, []);
+
+  const headerStyle = {
+    backgroundImage: `url(https://yorunoken.s-ul.eu/88Mh3UnN)`,
+    backgroundAttachment: "fixed",
+    backgroundPosition: `center ${backgroundY + 25}%`,
+    backgroundSize: "cover",
+  };
+  console.log(headerStyle);
+
   return (
     <div className="App">
-      <header className="App-header">
+      <header
+        className="App-header"
+        style={headerStyle}>
         <div className="bio-container">
           <h6
             className="Welcome"
