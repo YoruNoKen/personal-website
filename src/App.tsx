@@ -1,6 +1,7 @@
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Main from "./routes/Home";
 import Pledge from "./routes/Poems";
+// import Mp3 from "./routes/mp3";
 
 function App() {
   return (
@@ -18,6 +19,10 @@ function App() {
           path="/poems"
           element={<Pledge />}
         />
+        {/* <Route
+          path="/mp3"
+          element={<Mp3 />}
+        /> */}
       </Routes>
     </Router>
   );

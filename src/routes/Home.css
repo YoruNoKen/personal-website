@@ -3,6 +3,7 @@
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
+  position: relative;
 }
 
 .Refer {
@@ -62,10 +63,18 @@
 }
 
 .pfp-pic {
+  position: relative;
   outline: 2px solid #ccc;
   outline-offset: 2px;
   margin-top: -5px;
   height: 35vmin;
+  z-index: 99;
+}
+
+.pfp-pic.enlarged {
+  outline: 50430px solid rgba(40, 44, 52, 0.89);
+  outline-offset: 0px;
+  position: relative;
 }
 
 .social-icons {
@@ -215,7 +224,10 @@
   border-radius: 50px;
   padding: 0% 3% 3% 3%;
   background-color: rgba(40, 44, 52, 0.85);
+  justify-content: center;
+  align-items: center;
 }
+
 
 .Pledge-title {
   text-align: center;
@@ -226,7 +238,8 @@
   padding-top: 2%;
 }
 
-.Pledge-background {
+.Pledge-background,
+.Download-background {
   background-image: url(https://yorunoken.s-ul.eu/88Mh3UnN);
   background-attachment: fixed;
   background-size: cover;
@@ -241,4 +254,54 @@
   text-shadow: #282c34;
   font-size: 1.15rem;
   color: #ffdeb7;
+}
+
+.Download-container {
+  border: 0px solid #FFC784;
+  margin-top: -3%;
+  margin-left: 2%;
+  margin-right: 2%;
+  border-spacing: 200px;
+  border-width: 5px;
+  border-radius: 50px;
+  padding: 0% 3% 3% 3%;
+  background-color: rgba(40, 44, 52, 0.85);
+  justify-content: center;
+  align-items: center;
+}
+
+.Downloader-header {
+  text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  color: white;
+  padding-top: 5%;
+}
+
+.form-button {
+  margin-top: 10px;
+  position: static;
+  font-size: 120%;
+  size: 60%;
+  padding: 2% 4%;
+  margin: 1%;
+  background-color: #698ac9;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: all 0.2s ease-in-out;
+}
+
+.form-button:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.form-input {
+  background-color: #698ac9;
 }

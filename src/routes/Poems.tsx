@@ -7,7 +7,7 @@ export default function Pledge() {
   useEffect(() => {
     const handScroll = () => {
       const scrollPercent = (window.scrollY / window.innerHeight) * 80;
-      const newY = scrollPercent * 0.2;
+      const newY = scrollPercent * 0.3;
       setbackgroundY(newY);
     };
     window.addEventListener("scroll", handScroll);

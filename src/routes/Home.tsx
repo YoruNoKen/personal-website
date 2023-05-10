@@ -7,14 +7,19 @@ import github_logo from "../img/GitHub.png";
 import osu_logo from "../img/osu.png";
 import "./Home.css";
 
-import { VideoPlayer } from "../func/videoPlayer";
-import { Github } from "../func/githubShowcase";
+import { VideoPlayer } from "../components/videoPlayer";
+import { Github } from "../components/githubShowcase";
 
 export default function App() {
+  const [scaleSize, scaleSet] = useState(false);
+  const LargenImage = () => {
+    scaleSet(!scaleSize);
+  };
+
   const [backgroundY, setbackgroundY] = useState(0);
   useEffect(() => {
     const handScroll = () => {
-      const scrollPercent = (window.scrollY / window.innerHeight) * 80;
+      const scrollPercent = (window.scrollY / window.innerHeight) * 90;
       const newY = scrollPercent * 0.2;
       setbackgroundY(newY);
     };
@@ -43,8 +48,10 @@ export default function App() {
           <p className="bio">A photo of my wife:</p>
           <img
             src={pfp}
-            className="pfp-pic"
+            className={`pfp-pic ${scaleSize ? "enlarged" : ""}`}
             alt="logo"
+            onClick={LargenImage}
+            style={{ transform: `scale(${scaleSize ? 2 : 1})` }}
           />
           <br />
           <Link
