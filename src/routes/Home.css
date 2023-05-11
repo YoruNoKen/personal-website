@@ -17,6 +17,7 @@
 
 .top-button {
   margin-right: 10px;
+  opacity: 1;
   border: none;
   background-color: transparent;
   color: #333;
@@ -27,6 +28,7 @@
 }
 
 .top-link {
+  opacity: 1;
   color: rgb(196, 193, 189);
   text-decoration: none;
 }
