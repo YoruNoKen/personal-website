@@ -84,15 +84,13 @@
 }
 
 .icon {
-  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-  animation-name: icon-unhover;
-  animation-duration: 200ms;
-  animation-fill-mode: backwards;
+  animation: icon-unhover 200ms forwards;
   display: inline-block;
   vertical-align: middle;
   margin: 10px;
   width: 72px;
   height: 72px;
+  transition: all 0.2s ease-in-out;
 }
 
 .icon:not(:hover) {
@@ -100,12 +98,14 @@
 }
 
 .icon:hover {
-  animation-name: icon-hover;
-  animation-duration: 200ms;
-  animation-fill-mode: forwards;
+  animation: icon-hover 200ms forwards;
 }
 
 @keyframes icon-hover {
+  0% {
+    transform: scale(1);
+  }
+
   80% {
     transform: scale(1.18);
   }
@@ -117,17 +117,14 @@
 
 @keyframes icon-unhover {
   0% {
-    transform: scale(1.05);
-  }
-
-  90% {
-    transform: scale(0.96);
+    transform: scale(1.15);
   }
 
   100% {
     transform: scale(1);
   }
 }
+
 
 .button-top,
 .button-bottom {
