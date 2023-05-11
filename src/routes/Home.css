@@ -6,6 +6,35 @@
   position: relative;
 }
 
+.top-box {
+  background-color: #f1f1f1;
+  padding: 1%;
+  opacity: 0.4;
+  text-align: center;
+  position: relative;
+  z-index: 1
+}
+
+.top-button {
+  margin-right: 10px;
+  border: none;
+  background-color: transparent;
+  color: #333;
+  font-weight: bolder;
+  cursor: pointer;
+  transition: font-size 0.3s;
+  font-size: 105%
+}
+
+.top-link {
+  color: #333;
+  text-decoration: none;
+}
+
+.top-button:hover {
+  font-size: 125%
+}
+
 .Refer {
   color: #FFC784;
 }
@@ -306,4 +335,8 @@
 
 .form-input {
   background-color: #698ac9;
+}
+
+.download-button {
+  scroll-behavior: unset;
 }

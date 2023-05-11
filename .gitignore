@@ -14,6 +14,9 @@
 # vs code config
 .vscode/
 
+# webstorm config
+.idea
+
 # misc
 .DS_Store
 .env.local

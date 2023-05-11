@@ -9,19 +9,18 @@ import "./Home.css";
 
 import { VideoPlayer } from "../components/videoPlayer";
 import { Github } from "../components/githubShowcase";
-
 export default function App() {
   const [scaleSize, scaleSet] = useState(false);
   const LargenImage = () => {
     scaleSet(!scaleSize);
   };
 
-  const [backgroundY, setbackgroundY] = useState(0);
+  const [backgroundY, setBackgroundY] = useState(0);
   useEffect(() => {
     const handScroll = () => {
       const scrollPercent = (window.scrollY / window.innerHeight) * 90;
       const newY = scrollPercent * 0.2;
-      setbackgroundY(newY);
+      setBackgroundY(newY);
     };
     window.addEventListener("scroll", handScroll);
 
@@ -36,11 +35,7 @@ export default function App() {
       style={{ backgroundPosition: `center ${backgroundY + 25}%` }}>
       <header className="App-header">
         <div className="bio-container">
-          <h6
-            className="Welcome"
-            rel="noopener norefer rer">
-            Welcome!
-          </h6>
+          <h6 className="Welcome">Welcome!</h6>
           <p className="bio">
             My name is Yoru.
             <br /> I'm a beginner-level programmer and I like playing video games!
@@ -54,11 +49,6 @@ export default function App() {
             style={{ transform: `scale(${scaleSize ? 2 : 1})` }}
           />
           <br />
-          <Link
-            to="/poems"
-            className="Refer">
-            Poems
-          </Link>
           <div className="social-icons">
             <a
               href="https://www.youtube.com/@yorunoken"

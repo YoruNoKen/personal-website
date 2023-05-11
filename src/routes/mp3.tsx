@@ -4,13 +4,6 @@ import { useState, useEffect, useRef } from "react";
 import parser from "../utils/youtubeUrlParser";
 import axios from "axios";
 
-function getURLParameter(url: string, name: string) {
-  name = name.replace(/[[]/, "\\[").replace(/[\]]/, "\\]");
-  const regex = new RegExp("[\\?&]" + name + "=([^&#]*)");
-  const results = regex.exec(url);
-  return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
-}
-
 export default function Download() {
   const [isDone, setDone] = useState(false);
   const [result, setResult] = useState("");
@@ -34,25 +27,11 @@ export default function Download() {
     e.preventDefault();
     if (inputUrlRef.current) {
       const youtubeID = parser(inputUrlRef.current.value);
-
-      // const apiKey = process.env.RAPID_API_KEY;
-      const apiKey = "8f0ccab30cmsh4fd7992d86e20e0p18a33fjsna8be655472a0";
-      const options = {
-        method: "GET",
-        url: "https://youtube-video-download-info.p.rapidapi.com/dl",
-        params: { id: youtubeID },
-        headers: {
-          "X-RapidAPI-Key": apiKey,
-          "X-RapidAPI-Host": "youtube-video-download-info.p.rapidapi.com",
-        },
-      };
-
-      try {
-        const response = await axios.request(options);
-        setDone(true);
-      } catch (e) {
-        console.error(e);
-      }
+      const apiUrl = `https://convert2mp3s.com/api/single/mp3?url=https://www.youtube.com/watch?v=${youtubeID.toString()}`;
+      const res = await fetch(apiUrl);
+      console.log(res);
+      setDone(true);
+      setResult(`https://convert2mp3s.com/api/button/mp3?url=https://www.youtube.com/watch?v=${youtubeID.toString()}`);
     }
   };
 
@@ -78,7 +57,7 @@ export default function Download() {
               Download
             </button>
             <br />
-            {isDone ? <a href={result}>Click here</a> : "Waiting for result.."}
+            {isDone ? <a>test</a> : "Waiting for input.."}
           </form>
           <br />
           <Link
