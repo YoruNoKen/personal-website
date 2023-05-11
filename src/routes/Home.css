@@ -7,9 +7,9 @@
 }
 
 .top-box {
-  background-color: #f1f1f1;
-  padding: 1%;
+  background-color: rgb(29, 32, 32);
   opacity: 0.4;
+  padding: 1%;
   text-align: center;
   position: relative;
   z-index: 1
