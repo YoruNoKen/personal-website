@@ -2,7 +2,7 @@ import "./Home.css";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 
-export default function Pledge() {
+export function Pledge() {
   const [backgroundY, setbackgroundY] = useState(0);
   useEffect(() => {
     const handScroll = () => {

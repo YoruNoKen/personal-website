@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import pfp from "../img/pfp.png";
 import youtube_icon from "../img/Youtube.png";
@@ -9,7 +8,7 @@ import "./Home.css";
 
 import { VideoPlayer } from "../components/videoPlayer";
 import { Github } from "../components/githubShowcase";
-export default function App() {
+export function Home() {
   const [scaleSize, scaleSet] = useState(false);
   const LargenImage = () => {
     scaleSet(!scaleSize);
