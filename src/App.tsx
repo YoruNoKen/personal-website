@@ -1,10 +1,11 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Suspense, lazy } from "react";
 import Nav from "./components/Nav";
-// import Mp3 from "./routes/mp3";
-const Mom = lazyLoader("./routes/mothersday", "Mother");
-const Pledge = lazyLoader("./routes/Poems", "Pledge");
-const Home = lazyLoader("./routes/Home", "Home");
+// const Mia = lazyLoader("./routes/Mia", "Mia");
+// const Home = lazyLoader("./routes/Home", "Home");
+import { Home } from "./routes/Home";
+import { Mia } from "./routes/Mia";
+import Callback from "./routes/CallbackPage";
 
 function App() {
   return (
@@ -21,12 +22,12 @@ function App() {
             element={<Home />}
           />
           <Route
-            path="/poems"
-            element={<Pledge />}
+            path="/mia"
+            element={<Mia />}
           />
           <Route
-            path="/mothersday"
-            element={<Mom />}
+            path="/callback"
+            element={<Callback />}
           />
         </Routes>
       </Suspense>
@@ -37,11 +38,10 @@ function App() {
 function lazyLoader(path: string, exportName?: string) {
   return lazy(() => {
     const promise = import(`${path}`);
-    if (!exportName) {
-      return promise;
-    } else {
+    if (exportName) {
       return promise.then((module) => ({ default: module[exportName] }));
     }
+    return promise;
   });
 }
 

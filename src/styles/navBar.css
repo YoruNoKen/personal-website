@@ -1,0 +1,32 @@
+.top-box {
+    background-color: rgba(37, 37, 37, 0.7);
+    padding: 1%;
+    padding-left: 10%;
+    padding-right: 10%;
+    text-align: center;
+    position: fixed;
+    z-index: 500;
+    transform: translate(-50%);
+    left: 50%;
+}
+
+.top-button {
+    margin-right: 10px;
+    opacity: 1;
+    border: none;
+    background-color: transparent;
+    color: #333;
+    font-weight: bolder;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 105%
+}
+
+.top-link {
+    color: rgb(206, 202, 197);
+    text-decoration: none;
+}
+
+.top-button:hover {
+    transform: scale(1.2)
+}

@@ -1,4 +1,4 @@
-import "../routes/Home.css";
+import "../styles/Home.css";
 import { useState } from "react";
 
 export function VideoPlayer() {

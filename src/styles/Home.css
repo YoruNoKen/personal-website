@@ -6,35 +6,6 @@
   position: relative;
 }
 
-.top-box {
-  background-color: rgba(68, 70, 70, 0.4);
-  padding: 1%;
-  text-align: center;
-  position: relative;
-  z-index: 1
-}
-
-.top-button {
-  margin-right: 10px;
-  opacity: 1;
-  border: none;
-  background-color: transparent;
-  color: #333;
-  font-weight: bolder;
-  cursor: pointer;
-  transition: font-size 0.3s;
-  font-size: 105%
-}
-
-.top-link {
-  color: rgb(206, 202, 197);
-  text-decoration: none;
-}
-
-.top-button:hover {
-  font-size: 125%
-}
-
 .Refer {
   color: #FFC784;
 }
@@ -63,7 +34,6 @@
 
 .bio-container {
   border: 0px solid #FFC784;
-  margin-top: -3%;
   margin-left: 2%;
   margin-right: 2%;
   border-spacing: 200px;
@@ -97,7 +67,7 @@
   outline-offset: 2px;
   margin-top: -5px;
   height: 35vmin;
-  z-index: 99;
+  z-index: 3;
 }
 
 .pfp-pic.enlarged {
@@ -241,91 +211,4 @@
   width: 90%;
   height: auto;
   transition: all 0.3s ease;
-}
-
-/* NijikaPledge.tsx */
-
-.Pledge-container {
-  border: 0px solid #FFC784;
-  margin-top: -3%;
-  margin-left: 2%;
-  margin-right: 2%;
-  border-spacing: 200px;
-  border-width: 5px;
-  border-radius: 50px;
-  padding: 0% 3% 3% 3%;
-  background-color: rgba(40, 44, 52, 0.85);
-  justify-content: center;
-  align-items: center;
-}
-
-
-.Pledge-title {
-  text-align: center;
-  color: #ffd87d;
-  font-size: 200%;
-  font-weight: 400;
-  margin: 0;
-  padding-top: 2%;
-}
-
-.Pledge-background,
-.Download-background {
-  background-image: url(https://yorunoken.s-ul.eu/88Mh3UnN);
-  background-attachment: fixed;
-  background-size: cover;
-  background-repeat: no-repeat;
-  min-height: 100vh;
-}
-
-.Pledge-paragraph {
-  padding-left: 60px;
-  padding-right: 60px;
-  text-align: center;
-  text-shadow: #282c34;
-  font-size: 1.15rem;
-  color: #ffdeb7;
-}
-
-/* mothersday.tsx */
-
-.Mom-container {
-  border: 0px solid #FFC784;
-  margin-top: -2%;
-  margin-left: 2%;
-  margin-right: 2%;
-  border-spacing: 200px;
-  border-width: 5px;
-  border-radius: 50px;
-  padding: 1.5% 3% 3% 3%;
-  background-color: rgba(40, 44, 52, 0.85);
-  justify-content: center;
-  align-items: center;
-}
-
-.Mom-container2 {
-  border: 0px solid #FFC784;
-  margin-top: 20%;
-  margin-left: 2%;
-  margin-right: 2%;
-  margin-bottom: 10%;
-  border-spacing: 200px;
-  border-width: 5px;
-  border-radius: 50px;
-  padding: 1.5% 3% 3% 3%;
-  background-color: rgba(40, 44, 52, 0.85);
-  justify-content: center;
-  align-items: center;
-}
-
-.Mom-header {
-  text-align: center;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  color: white;
-  padding-bottom: 5%;
-  padding-top: 5%;
 }

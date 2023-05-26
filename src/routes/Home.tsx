@@ -4,7 +4,7 @@ import youtube_icon from "../img/Youtube.png";
 import twitter_icon from "../img/Twitter.png";
 import github_logo from "../img/GitHub.png";
 import osu_logo from "../img/osu.png";
-import "./Home.css";
+import "../styles/Home.css";
 
 import { VideoPlayer } from "../components/videoPlayer";
 import { Github } from "../components/githubShowcase";

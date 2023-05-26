@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import "prismjs/themes/prism-twilight.css";
 import Prism from "prismjs";
-import "../routes/Home.css";
+import "../styles/Home.css";
 const screenshotsMia = ["https://i.imgur.com/M761LdQ.png", "https://i.imgur.com/rLCbEtE.png", "https://i.imgur.com/jYR8t3N.png"];
 
 const code = `const { v1, tools, mods } = require('gatari-api-wrapper');
