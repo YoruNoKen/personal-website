@@ -7,7 +7,7 @@ export default function CallbackPage() {
   const userId = urlParams.get("state");
   const code = urlParams.get("code");
   const client_secret = process.env.osu_client_secret;
-  const client_id = "22333";
+  const client_id = "22337";
   console.log(urlParams);
 
   const tokenEndpoint = "https://osu.ppy.sh/oauth/token";
