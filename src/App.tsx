@@ -5,7 +5,6 @@ import Nav from "./components/Nav";
 // const Home = lazyLoader("./routes/Home", "Home");
 import { Home } from "./routes/Home";
 import { Mia } from "./routes/Mia";
-import Callback from "./routes/CallbackPage";
 
 function App() {
   return (
@@ -24,10 +23,6 @@ function App() {
           <Route
             path="/mia"
             element={<Mia />}
-          />
-          <Route
-            path="/callback"
-            element={<Callback />}
           />
         </Routes>
       </Suspense>
