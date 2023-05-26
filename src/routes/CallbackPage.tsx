@@ -6,7 +6,7 @@ export default function CallbackPage() {
   const urlParams = new URLSearchParams(window.location.search);
   const userId = urlParams.get("state");
   const code = urlParams.get("code");
-  const client_secret = "4b4NQeCosQx3ffFjKSjAX9g2QvGXCdtasMvZU4PA"; // process.env.osu_client_secret;
+  const client_secret = process.env.osu_client_secret;
   const client_id = "22333";
   console.log(urlParams);
 
